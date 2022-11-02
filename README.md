@@ -1,5 +1,6 @@
 # Project Title
 README Generator
+[readme_generator_demo.webm](https://user-images.githubusercontent.com/105369240/199596487-30327f5b-dd2c-42b5-a8ad-21b9c17557b3.webm)
 
 # Description
 The README Generator is a command line application that creates professional README files based off user input. The README file will include the project title, a description, table of contents, installation, usage, license, contribution, tests, and contact information. 
