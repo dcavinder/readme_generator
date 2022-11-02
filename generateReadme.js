@@ -8,10 +8,10 @@ ${data.description}
 # Table of Contents 
 * [Installation](#-Installation)
 * [Usage](#-Usage)
-* [License](#-Installation)
-* [Contributing](#-Contributing)
+* [License](#-License)
+* [How To Contribute](#-How-To-Contribute)
 * [Tests](#-Tests)
-* [Questions](#-Contact-Information)
+* [Questions](#-Questions)
     
 # Installation
 ${data.installation}
