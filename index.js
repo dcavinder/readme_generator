@@ -1,6 +1,9 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
+const generateReadme = require("./generateReadme");
+
+//checks to make sure the user entered some value
 function validateInfo(value) {
     if (value != "") {
         return true;
@@ -9,6 +12,7 @@ function validateInfo(value) {
     }
 }
 
+//user prompt questions
 const prompts = [
     {
         type: 'input',
@@ -36,7 +40,7 @@ const prompts = [
     },
     {
         type: 'input',
-        name: 'contributuions',
+        name: 'contribution',
         message: 'Please describe how to contribute to your project.',
         validate: validateInfo,
     },
@@ -60,13 +64,13 @@ const prompts = [
     },
     {
         type: 'input',
-        name: 'tests',
+        name: 'github',
         message: 'What is your Github user name?',
         validate: validateInfo,
     },
   ]
 
-
+  //creates readme file and passes in user input
   function writeToFile(fileName, data) {
     fs.writeFile(fileName, generateReadme(data), function (err) {
         if (err) {
@@ -77,8 +81,8 @@ const prompts = [
 
 function init() {
     inquirer.prompt(prompts).then((data) => {
-        console.log(JSON.stringify(data, null, " "));
-        writeToFile("./README.md", data);
+        console.log(JSON.stringify(data, null, ' '));
+        writeToFile('./new/README.md', data);
     });
 }
 
